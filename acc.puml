@@ -1,0 +1,91 @@
+@startuml
+annotation java.lang.Override
+annotation java.lang.SuppressWarnings
+class accomodationsystem.AccomodationSystem
+class accomodationsystem.AddMeter
+class accomodationsystem.AdminLoginFrame
+class accomodationsystem.CurrentBill
+class accomodationsystem.Login
+class accomodationsystem.MainMeter
+class accomodationsystem.ManagementPanel
+class accomodationsystem.MeterDecorator
+class accomodationsystem.Mtype
+class accomodationsystem.NormalMeter
+class accomodationsystem.PostPay
+class accomodationsystem.PrePay
+class accomodationsystem.PrepayMeter
+class accomodationsystem.TenantLoginFrame
+class accomodationsystem.TenantPanel
+class accomodationsystem.jdbc
+class accomodationsystem.meter_functions
+class accomodationsystem.meter_values
+class java.awt.Component
+class java.awt.HeadlessException
+class java.awt.event.ActionEvent
+class java.awt.event.ActionListener
+class java.util.Random
+class java.util.Timer
+class java.util.TimerTask
+class javax.swing.JFrame
+class javax.swing.JOptionPane
+class javax.swing.Timer
+class javax.swing.event.TableModelEvent
+class javax.swing.event.TableModelListener
+class javax.swing.table.DefaultTableModel
+class timer.NewJFrame
+interface accomodationsystem.Meter
+interface accomodationsystem.TypeSwitch
+accomodationsystem.AccomodationSystem --|> accomodationsystem.meter_values
+accomodationsystem.AccomodationSystem ..> java.awt.HeadlessException
+accomodationsystem.AddMeter ..> java.lang.SuppressWarnings
+accomodationsystem.AddMeter --|> javax.swing.JFrame
+accomodationsystem.AdminLoginFrame ..> java.lang.SuppressWarnings
+accomodationsystem.AdminLoginFrame --|> javax.swing.JFrame
+accomodationsystem.CurrentBill ..> java.lang.SuppressWarnings
+accomodationsystem.CurrentBill --|> javax.swing.JFrame
+accomodationsystem.CurrentBill ..> javax.swing.JOptionPane
+accomodationsystem.Login ..> java.lang.SuppressWarnings
+accomodationsystem.Login ..> java.awt.Component
+accomodationsystem.Login --|> javax.swing.JFrame
+accomodationsystem.MainMeter ..> java.lang.Override
+accomodationsystem.MainMeter ..> java.lang.SuppressWarnings
+accomodationsystem.MainMeter ..> java.awt.event.ActionEvent
+accomodationsystem.MainMeter ..> java.awt.event.ActionListener
+accomodationsystem.MainMeter ..> java.util.Random
+accomodationsystem.MainMeter --|> javax.swing.JFrame
+accomodationsystem.MainMeter ..> javax.swing.event.TableModelEvent
+accomodationsystem.MainMeter ..> javax.swing.event.TableModelListener
+accomodationsystem.MainMeter ..> javax.swing.table.DefaultTableModel
+accomodationsystem.ManagementPanel ..> java.lang.SuppressWarnings
+accomodationsystem.ManagementPanel --|> javax.swing.JFrame
+accomodationsystem.MeterDecorator ..> java.lang.Override
+accomodationsystem.MeterDecorator --|> accomodationsystem.Meter
+accomodationsystem.Mtype ..> java.lang.Override
+accomodationsystem.Mtype --|> accomodationsystem.TypeSwitch
+accomodationsystem.NormalMeter ..> java.lang.Override
+accomodationsystem.NormalMeter ..> java.awt.HeadlessException
+accomodationsystem.NormalMeter --|> accomodationsystem.Meter
+accomodationsystem.PostPay ..> java.lang.Override
+accomodationsystem.PostPay --|> accomodationsystem.meter_values
+accomodationsystem.PostPay ..> java.awt.HeadlessException
+accomodationsystem.PostPay --|> accomodationsystem.TypeSwitch
+accomodationsystem.PrePay ..> java.lang.Override
+accomodationsystem.PrePay --|> accomodationsystem.meter_values
+accomodationsystem.PrePay ..> java.awt.HeadlessException
+accomodationsystem.PrePay --|> accomodationsystem.TypeSwitch
+accomodationsystem.PrepayMeter ..> java.lang.Override
+accomodationsystem.PrepayMeter --|> accomodationsystem.MeterDecorator
+accomodationsystem.PrepayMeter ..> java.awt.HeadlessException
+accomodationsystem.TenantLoginFrame ..> java.lang.SuppressWarnings
+accomodationsystem.TenantLoginFrame --|> javax.swing.JFrame
+accomodationsystem.TenantPanel ..> java.lang.SuppressWarnings
+accomodationsystem.TenantPanel --|> javax.swing.JFrame
+accomodationsystem.meter_functions --|> accomodationsystem.meter_values
+accomodationsystem.meter_functions ..> javax.swing.Timer
+timer.NewJFrame ..> java.lang.Override
+timer.NewJFrame ..> java.lang.SuppressWarnings
+timer.NewJFrame ..> java.util.Random
+timer.NewJFrame ..> java.util.Timer
+timer.NewJFrame ..> java.util.TimerTask
+timer.NewJFrame --|> javax.swing.JFrame
+@enduml

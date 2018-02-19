@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="AccomodationSystem">
+  <ClassDiagramComponents>
+    <Class name="AccomodationSystem" package="accomodationsystem" visibility="public" xPosition="42.0" yPosition="301.0">
+      <Fields>
+        <Field name="conn" type="Connection" visibility="package"/>
+        <Field name="pst" type="PreparedStatement" visibility="package"/>
+        <Field name="rs" type="ResultSet" visibility="package"/>
+        <Field name="NameField" type="String" visibility="private"/>
+        <Field name="PasswordField" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNameField" returnType="String" visibility="public"/>
+        <Method name="setNameField" returnType="void" visibility="public">
+          <Argument type="String" name="NameField"/>
+        </Method>
+        <Method name="getPasswordField" returnType="String" visibility="public"/>
+        <Method name="setPasswordField" returnType="void" visibility="public">
+          <Argument type="String" name="PasswordField"/>
+        </Method>
+        <Method name="adminLogin" returnType="void" visibility="public"/>
+        <Method name="tenantLogin" returnType="void" visibility="public"/>
+        <Method name="setcost" returnType="void" visibility="public">
+          <Argument type="String" name="metertype"/>
+        </Method>
+        <Method name="getpostcost" returnType="void" visibility="public"/>
+        <Method name="getprecost" returnType="void" visibility="public">
+          <Argument type="int" name="meternum"/>
+          <Argument type="String" name="metertype"/>
+        </Method>
+        <Method name="postpaycost" returnType="int" visibility="public">
+          <Argument type="int" name="elecusage"/>
+        </Method>
+        <Method name="prepaycost" returnType="int" visibility="public">
+          <Argument type="int" name="elecusage"/>
+        </Method>
+        <Method name="getcredit" returnType="int" visibility="public">
+          <Argument type="int" name="meternum"/>
+        </Method>
+        <Method name="suspend" returnType="void" visibility="public">
+          <Argument type="int" name="meternum"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AddMeter" package="accomodationsystem" visibility="public" xPosition="27.0" yPosition="497.0">
+      <Fields>
+        <Field name="cancelbtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="nametxt" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="numtxt" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="savebtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="typecombo" type="javax.swing.JComboBox" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="cancelbtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="savebtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CurrentBill" package="accomodationsystem" visibility="public" xPosition="244.0" yPosition="21.0">
+      <Fields>
+        <Field name="acc" type="AccomodationSystem" visibility="package"/>
+        <Field name="mf" type="meter_functions" visibility="package"/>
+        <Field name="backbtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="balancelbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="costinclbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="meternumtxt" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="namelbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="searchbtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="statuslbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="typelbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="usagelbl" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="backbtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="searchbtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="formWindowOpened" returnType="void" visibility="private">
+          <Argument type="java.awt.event.WindowEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="jdbc" package="accomodationsystem" visibility="public" xPosition="893.0" yPosition="35.0">
+      <Fields>
+        <Field name="instance" type="jdbc" visibility="private" isStatic="true"/>
+        <Field name="conn" type="Connection" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstance" returnType="jdbc" visibility="public" isStatic="true"/>
+        <Method name="sqlite" returnType="Connection" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MainMeter" package="accomodationsystem" visibility="public" xPosition="893.0" yPosition="351.0">
+      <Fields>
+        <Field name="mf" type="meter_functions" visibility="package"/>
+        <Field name="table" type="JTable" visibility="package" isFinal="true"/>
+        <Field name="timer" type="Timer" visibility="package"/>
+        <Field name="value" type="int" visibility="public"/>
+        <Field name="mt" type="Mtype" visibility="package"/>
+        <Field name="post" type="TypeSwitch" visibility="package"/>
+        <Field name="pre" type="TypeSwitch" visibility="package"/>
+        <Field name="totallbl" type="JLabel" visibility="package"/>
+        <Field name="accstatus" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="addmeterbtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="backbtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cancelbtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="exitbtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTabbedPane1" type="javax.swing.JTabbedPane" visibility="private"/>
+        <Field name="meternametxt" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="meternumtxt" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="meternumtxt1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="metertable" type="javax.swing.JTable" visibility="private"/>
+        <Field name="metertypelbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="namelbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="preloadtxt" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="resetbtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="restartbtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="savebtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="savebtn2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="searchbtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="searchbtn1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="stopbtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="switchbtn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="totalusagelbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="typelbl" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="usagelbl" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="savebtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="formWindowOpened" returnType="void" visibility="private">
+          <Argument type="java.awt.event.WindowEvent" name="evt"/>
+        </Method>
+        <Method name="searchbtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="searchbtn1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="savebtn2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="backbtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="exitbtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="cancelbtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="metertablePropertyChange" returnType="void" visibility="private">
+          <Argument type="java.beans.PropertyChangeEvent" name="evt"/>
+        </Method>
+        <Method name="switchbtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="preloadtxtActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="addmeterbtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="stopbtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="resetbtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="restartbtnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="setrandom" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MeterDecorator" package="accomodationsystem" visibility="public" xPosition="753.0" yPosition="796.0">
+      <Fields>
+        <Field name="privatemeterref" type="Meter" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Meter" name="meterref"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addMeter" returnType="void" visibility="public">
+          <Argument type="int" name="num"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="type"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="meter_functions" package="accomodationsystem" visibility="public" xPosition="612.0" yPosition="26.0">
+      <Fields>
+        <Field name="conn" type="Connection" visibility="package"/>
+        <Field name="pst" type="PreparedStatement" visibility="package"/>
+        <Field name="rs" type="ResultSet" visibility="package"/>
+        <Field name="timer" type="Timer" visibility="package"/>
+        <Field name="table" type="JTable" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="viewallmeters" returnType="void" visibility="public">
+          <Argument type="JTable" name="metertable"/>
+        </Method>
+        <Method name="searchmeter" returnType="void" visibility="public">
+          <Argument type="int" name="meternum"/>
+        </Method>
+        <Method name="saveusage" returnType="void" visibility="public"/>
+        <Method name="savemeter" returnType="void" visibility="public"/>
+        <Method name="loadmeter" returnType="void" visibility="public">
+          <Argument type="int" name="meternum"/>
+        </Method>
+        <Method name="saveload" returnType="void" visibility="public">
+          <Argument type="int" name="meternum"/>
+        </Method>
+        <Method name="addmeter" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="meter_values" package="accomodationsystem" visibility="public" xPosition="532.0" yPosition="370.0">
+      <Fields>
+        <Field name="meternum" type="int" visibility="package"/>
+        <Field name="metername" type="String" visibility="package"/>
+        <Field name="metertype" type="String" visibility="package"/>
+        <Field name="elecusage" type="int" visibility="package"/>
+        <Field name="status" type="String" visibility="package"/>
+        <Field name="credit" type="int" visibility="package"/>
+        <Field name="cost" type="int" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getCost" returnType="int" visibility="public"/>
+        <Method name="setCost" returnType="void" visibility="public">
+          <Argument type="int" name="cost"/>
+        </Method>
+        <Method name="getCredit" returnType="int" visibility="public"/>
+        <Method name="setCredit" returnType="void" visibility="public">
+          <Argument type="int" name="credit"/>
+        </Method>
+        <Method name="getMeternum" returnType="int" visibility="public"/>
+        <Method name="setMeternum" returnType="void" visibility="public">
+          <Argument type="int" name="meternum"/>
+        </Method>
+        <Method name="getMetername" returnType="String" visibility="public"/>
+        <Method name="setMetername" returnType="void" visibility="public">
+          <Argument type="String" name="metername"/>
+        </Method>
+        <Method name="getMetertype" returnType="String" visibility="public"/>
+        <Method name="setMetertype" returnType="void" visibility="public">
+          <Argument type="String" name="metertype"/>
+        </Method>
+        <Method name="getElecusage" returnType="int" visibility="public"/>
+        <Method name="setElecusage" returnType="void" visibility="public">
+          <Argument type="int" name="elecusage"/>
+        </Method>
+        <Method name="getStatus" returnType="String" visibility="public"/>
+        <Method name="setStatus" returnType="void" visibility="public">
+          <Argument type="String" name="status"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Mtype" package="accomodationsystem" visibility="public" xPosition="1113.0" yPosition="26.0">
+      <Fields>
+        <Field name="state" type="TypeSwitch" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getState" returnType="TypeSwitch" visibility="public"/>
+        <Method name="setState" returnType="void" visibility="public">
+          <Argument type="TypeSwitch" name="state"/>
+        </Method>
+        <Method name="switchtype" returnType="void" visibility="public">
+          <Argument type="int" name="meternum"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="NormalMeter" package="accomodationsystem" visibility="public" xPosition="315.0" yPosition="936.0">
+      <Fields>
+        <Field name="conn" type="Connection" visibility="package"/>
+        <Field name="pst" type="PreparedStatement" visibility="package"/>
+        <Field name="rs" type="ResultSet" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addMeter" returnType="void" visibility="public">
+          <Argument type="int" name="num"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="type"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PostPay" package="accomodationsystem" visibility="public" xPosition="1440.0" yPosition="573.0">
+      <Fields>
+        <Field name="conn" type="Connection" visibility="package"/>
+        <Field name="pst" type="PreparedStatement" visibility="package"/>
+        <Field name="rs" type="ResultSet" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="int" name="meternum"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="switchtype" returnType="void" visibility="public">
+          <Argument type="int" name="meternum"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PrePay" package="accomodationsystem" visibility="public" xPosition="1085.0" yPosition="618.0">
+      <Fields>
+        <Field name="conn" type="Connection" visibility="package"/>
+        <Field name="pst" type="PreparedStatement" visibility="package"/>
+        <Field name="rs" type="ResultSet" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="int" name="meternum"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="switchtype" returnType="void" visibility="public">
+          <Argument type="int" name="meternum"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PrepayMeter" package="accomodationsystem" visibility="public" xPosition="690.0" yPosition="1046.0">
+      <Fields>
+        <Field name="conn" type="Connection" visibility="package"/>
+        <Field name="pst" type="PreparedStatement" visibility="package"/>
+        <Field name="rs" type="ResultSet" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Meter" name="meterref"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addMeter" returnType="void" visibility="public">
+          <Argument type="int" name="num"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="type"/>
+        </Method>
+        <Method name="prepaid" returnType="void" visibility="private">
+          <Argument type="int" name="num"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Meter" package="accomodationsystem" visibility="public" xPosition="410.0" yPosition="680.0">
+      <Methods>
+        <Method name="addMeter" returnType="void" visibility="public">
+          <Argument type="int" name="num"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="type"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="TypeSwitch" package="accomodationsystem" visibility="public" xPosition="1338.0" yPosition="370.0">
+      <Methods>
+        <Method name="switchtype" returnType="void" visibility="public">
+          <Argument type="int" name="meternum"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="accomodationsystem.PrePay" target="accomodationsystem.meter_values"/>
+    <HasRelation name="mt" source="accomodationsystem.MainMeter" target="accomodationsystem.Mtype" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="accomodationsystem.meter_functions" target="accomodationsystem.meter_values"/>
+    <HasRelation name="pre" source="accomodationsystem.MainMeter" target="accomodationsystem.TypeSwitch" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="accomodationsystem.jdbc" target="accomodationsystem.jdbc" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="instance" source="accomodationsystem.jdbc" target="accomodationsystem.jdbc" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="accomodationsystem.Mtype" target="accomodationsystem.TypeSwitch"/>
+    <IsRelation name="is" source="accomodationsystem.PrepayMeter" target="accomodationsystem.MeterDecorator"/>
+    <HasRelation name="acc" source="accomodationsystem.CurrentBill" target="accomodationsystem.AccomodationSystem" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="accomodationsystem.PostPay" target="accomodationsystem.TypeSwitch"/>
+    <UseRelation source="accomodationsystem.Mtype" target="accomodationsystem.TypeSwitch" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mf" source="accomodationsystem.CurrentBill" target="accomodationsystem.meter_functions" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="accomodationsystem.PrePay" target="accomodationsystem.TypeSwitch"/>
+    <HasRelation name="m" source="accomodationsystem.AddMeter" target="accomodationsystem.Meter" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="p" source="accomodationsystem.AddMeter" target="accomodationsystem.Meter" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="accomodationsystem.AccomodationSystem" target="accomodationsystem.meter_values"/>
+    <HasRelation name="mf" source="accomodationsystem.MainMeter" target="accomodationsystem.meter_functions" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="privatemeterref" source="accomodationsystem.MeterDecorator" target="accomodationsystem.Meter" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="post" source="accomodationsystem.MainMeter" target="accomodationsystem.TypeSwitch" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="accomodationsystem.NormalMeter" target="accomodationsystem.Meter"/>
+    <HasRelation name="state" source="accomodationsystem.Mtype" target="accomodationsystem.TypeSwitch" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="accomodationsystem.MeterDecorator" target="accomodationsystem.Meter"/>
+    <IsRelation name="is" source="accomodationsystem.PostPay" target="accomodationsystem.meter_values"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
